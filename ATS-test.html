@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Resume Screening</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="{{ url_for('static', filename='js/script.js') }}"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,800;1,800&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+  <video autoplay muted loop id="myVideo">
+        <source src="bg.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+
+  <!-- Navbar -->
+  <nav>
+    <img src="webico.png" class="icon">
+    <ul>
+      <li><a href="#" class="nav-link" data-target="home">Home</a></li>
+      <li><a href="#" class="nav-link" data-target="about">About</a></li>
+      <li><a href="#" class="nav-link" data-target="howto">Help</a></li>
+      <li><a href="#" class="nav-link" data-target="future">Future</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="sign-in.html">sign-in</a></li>
+      <li><a href="resume-temp.html">Resume Templates</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+   <h2 class="Mainheading">AI Resume Screening System</h2>
+    <section id="home" class="section active">
+    <div class="center-container">
+      <p>Upload Resume & Get Your ATS Score Instantly</p>
+
+      <form id="ats-form" method="POST" action="/analyze" enctype="multipart/form-data">
+        <label>Upload Resume (.pdf or .docx):</label>
+        <input type="file" name="resume" required>
+
+        <label>Upload Job Description (.pdf or .docx):</label>
+        <input type="file" name="job_description">
+
+        <label><input type="checkbox" name="only_resume"> Check ATS using only resume</label>
+
+        <button type="submit">Analyze</button>
+      </form>
+
+        <div class="ats-result">
+          <h3>ATS Score</h3>
+          <p><strong>Name:</strong>  result.name </p>
+          <p><strong>Email:</strong>  result.email </p>
+          <p><strong>Skills:</strong>  result.skills </p>
+        </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About This App</h2>
+    <p>This AI-powered system helps users evaluate how suitable their resume is for a given job.</p>
+    <ul>
+      <li>Built with: Flask, Python, HTML/CSS/JS</li>
+      <li>Uses NLP and docx2txt for text extraction</li>
+      <li>Created by Anand Patel, 2025</li>
+    </ul>
+  </section>
+
+  <section id="howto" class="section">
+    <h2>How to Use</h2>
+    <ul>
+      <li>Upload your resume (.pdf or .docx)</li>
+      <li>Optionally upload the job description</li>
+      <li>Click “Analyze” to get your ATS score</li>
+      <li>If JD is skipped, only resume is scored</li>
+    </ul>
+    <p><strong>Note:</strong> Supported formats are .pdf and .docx only</p>
+  </section>
+
+  <section id="future" class="section">
+    <h2>Future Updates</h2>
+    <ul>
+      <li>PDF report download with feedback</li>
+      <li>AI-powered resume improvement suggestions</li>
+      <li>Multi-user support and login</li>
+      <li>Real-time resume optimization tips</li>
+    </ul>
+  </section>
+
+</body>
+</html>

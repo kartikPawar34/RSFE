@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume Tools Dashboard</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    body {
+      background: #f9f9f9;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+    .card h2 {
+      margin-bottom: 10px;
+      font-size: 20px;
+      color: #444;
+    }
+    .card p {
+      color: #555;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .card ul {
+      margin-top: 10px;
+      padding-left: 18px;
+    }
+    .card ul li {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 8px 15px;
+      background: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    .btn:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Resume Toolkit</h1>
+  <div class="container">
+
+    <div class="card">
+      <h2>ATS Score Checker (Resume Only)</h2>
+      <p>Upload your resume and get visual ATS score + improvement suggestions.</p>
+      <ul>
+        <li>ATS score circle meter</li>
+        <li>Missing content table (e.g., GitHub)</li>
+        <li>AI upgrade recommendations</li>
+      </ul>
+      <a href="#" class="btn">Try Now</a>
+    </div>
+
+    <div class="card">
+      <h2>ATS + JD Matcher</h2>
+      <p>Upload resume + job description to check match % and improvement areas.</p>
+      <ul>
+        <li>Match % prediction</li>
+        <li>Strong vs Weak points</li>
+        <li>AI-generated text suggestions</li>
+      </ul>
+      <a href="#" class="btn">Upload & Analyze</a>
+    </div>
+
+    <div class="card">
+      <h2>Resume Maker</h2>
+      <p>Everything you need to build or update your resume.</p>
+      <ul>
+        <li>ATS-friendly + normal templates</li>
+        <li>Manual upload/update</li>
+        <li>AI resume builder from form</li>
+        <li>Section-wise suggestions</li>
+      </ul>
+      <a href="#" class="btn">Start Building</a>
+    </div>
+
+    <div class="card">
+      <h2>AI Suggestion Module</h2>
+      <p>Let AI guide your career growth and resume optimization.</p>
+      <ul>
+        <li>Career path prediction</li>
+        <li>Skill upgrade suggestions</li>
+        <li>Improved resume phrases</li>
+      </ul>
+      <a href="#" class="btn">Explore AI Suggestions</a>
+    </div>
+
+    <div class="card">
+      <h2>Web App Features</h2>
+      <p>Seamless experience across devices with powerful tools.</p>
+      <ul>
+        <li>Responsive design (Mobile + Desktop)</li>
+        <li>Convert to App (PWA)</li>
+        <li>Dark/Light themes</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Security & Privacy</h2>
+      <p>Your data is protected and sessions are secure.</p>
+      <ul>
+        <li>Session-based login</li>
+        <li>Resume access only with auth</li>
+        <li>Secure storage</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Extra Tools</h2>
+      <p>Additional features and improvements.</p>
+      <ul>
+        <li>Export resume or report to PDF</li>
+        <li>Save and edit resume</li>
+        <li>UI customization</li>
+      </ul>
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,160 @@
+body {
+    font-family: "DM Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    color:rgb(255, 255, 255);
+  }
+  
+  nav {
+    background-color:#00000074;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "DM Sans", sans-serif;
+    backdrop-filter:blur(10px);
+  }
+  
+  nav h1 {
+    margin: 0;
+    font-size: 20px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color:#ffff;
+    
+  }
+  
+  .section {
+    display: none;
+    padding: 40px;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .section.active {
+    display: block;
+  }  
+  #ats-form label {
+    display: block;
+    margin: 10px 0 5px;
+  }
+  
+  #ats-form input[type="file"],
+  #ats-form input[type="checkbox"] {
+    margin-bottom: 10px;
+  }
+  
+  #ats-form button {
+    font-family: "DM Sans", sans-serif;
+    font-size:15px;
+    width:50%;
+    height:40px;
+    background:goldenrod;
+    border-radius:12px;
+    transition: ease 0.4s;
+    border:1px solid #000;
+    cursor: pointer;
+  }  
+  
+  .ats-result {
+    margin-top: 30px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    border:1px solid #3b3b3b79;   
+    background:#00000041;
+    border-radius: 10px;
+    transition: ease-in-out 0.5s;
+  }
+  .ats-result:hover{
+    border:1px solid #0000006c;
+
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    color: #ccc;
+    font-size: 14px;
+    background:#00000051;
+  }
+  #myVideo {
+      position: fixed; 
+      top: 0;
+      left: 0;
+      width: 100vw; 
+      height: 100vh; 
+      object-fit: cover; 
+      z-index: -1;
+      pointer-events: none; 
+    }
+  h2{
+    font-size:50px;
+    transition: ease-in 0.5s;
+    cursor:default;
+    text-align: center;
+  }  
+  p{
+    font-size:20px;
+    cursor:default;
+    text-align: center;
+  }
+  form{
+    background:#00000046;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    text-align: center;
+    border:1px solid #3b3b3b79;
+    transition:ease-in-out 0.5s;
+  } 
+  form:hover{
+    border:1px solid #3b3b3bc9;
+    margin-bottom:10px;
+  }
+  label{
+    font-size:18px;
+  }
+  .icon{
+    width:170px;
+    height:60px;
+    border-radius:10px;
+  }
+  .more{
+    border:none;
+    background:none;
+    font-size:16px;
+    font:inherit;
+    padding:0;
+  }
+  .Mainheading{
+    font-size:5rem;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

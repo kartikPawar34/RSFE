@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Template</title>
+    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            z-index: 1;
+            font-family: "DM Sans", sans-serif;
+            color:#fff;
+        }
+        #myVideo {
+            position: fixed; 
+            top: 0;
+            left: 0;
+            width: 100vw; 
+            height: 100vh; 
+            object-fit: cover; 
+            z-index: -1;
+            pointer-events: none; 
+        }
+        .template-0{
+            font-weight: 600;
+            font-size:20px;
+            position: relative;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .template-1 {
+            display:flex;
+            justify-content: center;        
+            margin:auto;
+            gap:20px;
+            align-items: center;
+        }
+        .card {
+            font-size:16px;
+            font-family: "DM Sans", sans-serif;
+            background-color:#e4e4e42e;
+            margin:5px;
+            padding:10px;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+            transition:ease 0.3s;
+            height:auto;
+            border:1px solid #ffffff6b;
+            width:30%;
+        }
+        .card:hover{
+            transform:translatey(-12px);
+            border:1px solid #ffffff;
+        }
+        .card-button{
+            font-family: "DM Sans", sans-serif;
+            font-size:15px;
+            width:50%;
+            height:40px;
+            background:goldenrod;
+            border-radius:12px;
+            transition: ease 0.3s;
+            border:1px solid #1f15016e;
+        }
+        .r-image{
+            width:250px;
+            margin-bottom:10px;
+            border-radius:18px;
+            transition:ease 0.5s;
+        }
+        p{
+            font-family: "DM Sans", sans-serif;
+            font-weight: lighter;
+            font-size:2rem;
+        }
+        .main-heading{
+            text-align:center;
+            font-family:900;
+            font-size:5rem;
+        }
+        .navigation{
+            margin:5rem 0rem;
+        }
+        a{
+            text-decoration: none;
+            border:1px solid #000;
+            font-size:1.3rem;
+            padding:0.5rem 2rem;
+            font-weight: 300;
+            border-radius:9rem;
+            background:goldenrod;
+            color:#000;
+            transition:ease 0.3s;
+        }
+        a:hover{
+            background:rgb(255, 255, 255);
+        }
+        h2{
+            font-size:2rem;
+        }
+
+    </style>
+
+</head>
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="bg.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+      <h1 class="main-heading">Select Resume Template Unique to Personality</h1>
+    <div class="template-0">            
+        <p>When choosing a resume template that truly reflects your personality, it's about finding a design that not only looks good but also aligns with who you are professionally and the industry you're targeting</p>
+
+        <div class="navigation">
+            <a href="index.html">Home</a>
+            <a href="AI.html">Services</a>
+            <a href="About.html">About</a>
+            <a href="sign-in.html">sign-in</a>
+            <a href="front (1).html">Home</a>
+            
+        </div>
+        
+        <div class="template-1">
+            <div class="card">
+                <h2>Dark</h2>
+                <img src="3.png" class="r-image">
+                <button class="card-button">Choose This</button>
+            </div>
+            <div class="card">
+                <h2>Light</h2>
+                <img src="2.png" class="r-image">
+                <button class="card-button">Choose This</button>
+            </div>
+            <div class="card">
+                <h2>Colored</h2>
+                <img src="4.png" class="r-image">
+                <button class="card-button">Choose This</button>
+            </div>
+        </div>
+    </div>    
+
+</body>
+</html>

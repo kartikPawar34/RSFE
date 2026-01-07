@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ResumeScreen Dashboard</title>
+  <style>
+    #myVideo {
+      position: fixed; 
+      top: 0;
+      left: 0;
+      width: 100vw; 
+      height: 100vh; 
+      object-fit: cover; 
+      z-index: -1;
+      pointer-events: none; 
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      min-height: 100vh;
+      color:#fff;
+    }
+    h2{
+      margin:1rem;
+    }
+    h1{
+      margin:0rem 0rem 0rem;
+      font-size:3rem;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 240px;
+      backdrop-filter: blur(10px);
+      background: #0351b744;
+      color: #ffffff32;
+      padding: 20px 0;
+      position: fixed;
+      height: 100%;
+    }
+
+    .sidebar h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 15px 25px;
+      color: #ffffff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover, .sidebar a.active {
+      background: #000000;
+    }
+
+    /* Top Navbar */
+    .content {
+      margin-left: 240px;
+      padding: 20px 30px;
+      width: calc(100% - 240px);
+    }
+    .icon {
+      width:170px;
+      height:60px;
+      border-radius:10px;
+      margin:-0.5rem 0rem 1rem 0.65rem;
+    }
+    .welcome{
+      margin-bottom: 10px;
+      color: #ffffff;
+      font-size:7rem;
+    }
+    .about{
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size:1.8rem;
+      font-weight:lighter;
+      margin:2rem 0rem 2rem 0rem;
+    }
+    .about1{
+      font-size:1.4rem;
+      margin:1rem;
+    }
+    .card{
+      display:flex;
+      gap:2rem;
+    }
+    .cards{
+      border:1px solid #ffffff68;
+      width:24rem;
+      height:12rem;
+      border-radius:15px;
+      backdrop-filter:blur(12px);
+      background:#00000053;
+      cursor: pointer;
+      margin:1.4rem 0rem;
+    }
+    .learning{
+      width:30%;
+      height:3rem;
+      margin:1rem 0rem 3rem 0rem;
+      background-color:goldenrod;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: large;
+      cursor:pointer;
+      border:1px solid #000000;
+      border-radius:12px;
+    }
+    .learning:hover{
+      background-color:black;
+      color:goldenrod;
+      border:1px solid goldenrod;
+    }
+    @media screen and (max-width: 480px) {
+      body {
+        background-color: lightblue;
+        font-size: 14px;
+      }
+
+      .container {
+        width: 100%;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <video autoplay muted loop id="myVideo">
+      <source src="bg.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+  </video>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <img src="webico.png" class="icon">
+    <a href="login.html"> Login</a>
+    <a href="sign-in.html"> Register</a>
+    <a href="#" onclick="showSection('about')">About</a>
+    <a href="ATS-test.html"> Test ATS</a>
+    <a href="AI.html" onclick="showSection('settings')"> Settings</a>
+  </div>
+
+  <div class="content">
+    <h1 class="welcome">Welcome to ResumeScreen</h1>
+    <button class="learning">
+      Learn more
+    </button>
+    <h1>Upcoming Feature</h1>
+    <div class="card" >
+      <div class="cards">
+        <h2>AI Resume Builder + Job Tracker</h2>
+        <p class="about1">Advanced Analysis: Scores against 15+ metrics & specific job descriptions.</p>
+      </div>
+      <div class="cards">
+        <h2>All-in-one Job Search Suite</h2>
+        <p class="about1">20+ Checks: Includes formatting, keyword density, and tone analysis.</p>
+      </div>
+      <div class="cards">
+        <h2>Design-Led Resume Builder</h2>
+        <p class="about1">Real-time Feedback: Scores readability and ATS compatibility as you type.</p>
+      </div>
+    </div>
+      <p class="about" id="about"></p>
+  </div>
+  <script>
+    const displaysection = {
+      about : `The Resume ATS Optimization Engine is a data-driven recruitment tool designed to bridge the gap between job seekers and automated hiring systems. By leveraging advanced text-parsing algorithms, the application performs a multi-layered analysis of a candidate's resume against specific job descriptions. It evaluates critical metrics such as keyword density, semantic relevance, and formatting compatibility, providing users with a real-time compatibility score. Beyond simple scoring, the tool identifies missing high-value skills and suggests actionable improvements to resume structure, ensuring that qualified talent isn't filtered out by algorithmic bias. Built with a focus on speed and transparency, it empowers applicants to tailor their professional profiles with precision and confidence.`,
+    };
+
+    function showSection(ID){
+    const DSP = document.getElementById("about");
+
+      if(displaysection[ID]){
+        DSP.innerText = displaysection[ID];
+      }else{
+        DSP.innerText = "PLEASE CONTACT GOD";
+      }
+    }
+  </script>
+</body> 
+</html>
