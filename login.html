@@ -23,11 +23,7 @@
       width: 90%;
       max-width:25rem;
       text-align: center;
-      transition:ease-out 1s;
       border:transparent;
-    }
-    .login-container:hover{
-      transform:scale(1.02);
     }
     .login-container h2 {
       margin-bottom: 20px;
@@ -39,7 +35,7 @@
       margin: 10px 0;
       border: none;
       border-radius: 8px;
-      background-color: rgba(75, 73, 73, 0.712);
+      background-color: rgba(212, 212, 212, 0.712);
     }
     .login-container button {
        font-family: "DM Sans", sans-serif;
@@ -49,7 +45,7 @@
         background:goldenrod;
         border-radius:12px;
         transition: ease 0.4s;
-        border:1px solid #0000;
+        border:1px solid #d6d6d6c2;
     }
 
     .error-msg {
@@ -67,7 +63,37 @@
       z-index: -1;
       pointer-events: none; 
     }
-    
+    @media screen and (max-width: 1080px) {
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .login-container {
+      margin: auto;
+      width: 10rem;
+    }
+    .login-container h2 {
+      margin-bottom: 20px;
+      font-size:25px;
+    }
+    .login-container input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 8px;
+      background-color: rgba(255, 255, 255, 0.712);
+    }
+    .login-container button {
+       font-family: "DM Sans", sans-serif;
+        font-size:0.9rem;
+        width:11.2rem;
+        height:40px;       
+    }   
+}
+
   </style>
 </head>
 <body>

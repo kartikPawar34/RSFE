@@ -17,7 +17,7 @@
     h1 {
       text-align: center;
       margin-bottom: 30px;
-      color: #333;
+      color: #ffffff;
     }
     .container {
       display: grid;
@@ -25,29 +25,25 @@
       gap: 20px;
     }
     .card {
-      background: #fff;
+      background: #5f5f5f2a;
       padding: 20px;
       border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      transition: 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+      backdrop-filter:blur(12px);
     }
     .card h2 {
       margin-bottom: 10px;
       font-size: 20px;
-      color: #444;
+      color: #ffffff;
     }
     .card p {
-      color: #555;
+      color: #ffffff;
       font-size: 14px;
       line-height: 1.5;
     }
     .card ul {
       margin-top: 10px;
       padding-left: 18px;
+      color:#fff;
     }
     .card ul li {
       font-size: 14px;
@@ -57,21 +53,79 @@
       display: inline-block;
       margin-top: 12px;
       padding: 8px 15px;
-      background: #007bff;
-      color: #fff;
+      background:goldenrod;
+      color: #000000;
       text-decoration: none;
       border-radius: 6px;
       font-size: 14px;
     }
     .btn:hover {
-      background: #0056b3;
+      background: #000000;
+      border:1px solid goldenrod;
+      color:goldenrod;
     }
+    #myVideo {
+      position: fixed; 
+      top: 0;
+      left: 0;
+      width: 100vw; 
+      height: 100vh; 
+      object-fit: cover; 
+      z-index: -1;
+      pointer-events: none; 
+    }
+    @media (max-width: 1080px) {
+    body {
+      padding:1rem; 
+      flex-direction: column;
+    }
+    .btn {
+      display: block;
+      text-align: center;
+    }
+    .card{
+      width:100%;
+      padding:3rem;
+    }
+    .card h2 {
+      font-size:3rem;
+    }
+    .card p {
+      color: #ffffff;
+      font-size:2.5rem;
+      line-height: 1.5;
+    }
+    .card ul {
+      margin-top: 1rem;
+      padding-left: 1rem;
+    }
+    .card ul li {
+      font-size: 2rem;
+      margin-bottom:0.5rem;
+      color:#fff;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 12px;
+      background:goldenrod;
+      color: #000000;
+      text-decoration: none;
+      font-size:2rem;
+    }
+    .btn:hover {
+      background: #000000;
+      border:1px solid goldenrod;
+      color:goldenrod;
+    }
+}
   </style>
 </head>
 <body>
-  <h1>Resume Toolkit</h1>
+    <video autoplay muted loop id="myVideo">
+        <source src="bg.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
   <div class="container">
-
     <div class="card">
       <h2>ATS Score Checker (Resume Only)</h2>
       <p>Upload your resume and get visual ATS score + improvement suggestions.</p>
