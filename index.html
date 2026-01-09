@@ -106,7 +106,7 @@
       height:3rem;
       margin:1rem 0rem 3rem 0rem;
       background-color:goldenrod;
-      font-family: 'Courier New', Courier, monospace;
+      font-family: 'Courier New';
       font-size: large;
       cursor:pointer;
       border:1px solid #000000;
@@ -142,7 +142,7 @@
         h1 {
           font-size: 4rem;
           text-align: center;
-          margin-bottom:2rem;
+          margin:5rem;
         }
         .card {
           flex-direction: column;
@@ -160,28 +160,40 @@
         .learning {
           width: 100%;
           height:6rem;
-          margin: 4rem 0;
+          margin:3rem 0;
           font-size:3rem;
+          color:#000;
+          border-radius:25px;
+        }
+        .learning:hover{
+          color:goldenrod;
+          background:#0000;
+          border:1px solid goldenrod;
         }
         .about1{
           font-size:2.5rem;
         }
         .about{
-          font-size:2.5rem;
+          font-size:3rem;
           letter-spacing:1px;
           word-spacing:2px;
-          margin-bottom:5rem
+          margin-bottom:5rem 0;
+          backdrop-filter:blur(12px);
+          background:#0000;
+          padding:0 3rem;
         }
         .for-mobile{
           display:contents;
         }
         a{
           text-decoration: none;
-          color:#000000;
+          color:#ffffff;
           font-size:2rem;
-          background:goldenrod;
+          background:rgba(83, 83, 83, 0.353);
+          backdrop-filter:blur(12px);
           border-radius:25px;
           padding:2rem;
+          border:1px solid #151515;
         }
       }
   </style>
@@ -191,8 +203,6 @@
       <source src="bg.mp4" type="video/mp4">
         Your browser does not support HTML5 video.
   </video>
-
-  <!-- Sidebar -->
   <div class="sidebar">
     <img src="webico.png" class="icon">
     <a href="login.html"> Login</a>
@@ -207,6 +217,15 @@
     <button class="learning" onclick="showSection('learning')">
       Learn more
     </button>
+    <p class="about" id="learning">
+      <div class="for-mobile">
+        <a href="login.html"> Login</a>
+        <a href="sign-in.html"> Register</a>
+        <a href="#">About</a>
+        <a href="ATS-test.html"> Test ATS</a>
+        <a href="AI.html" onclick="showSection('settings')"> Settings</a>
+     </div>
+   </p>
     <h1>Upcoming Feature</h1>
     <div class="card" >
       <div class="cards">
@@ -222,13 +241,6 @@
         <p class="about1">Real-time Feedback: Scores readability and ATS compatibility as you type.</p>
       </div>
     </div>
-      <p class="about" id="learning"><div class="for-mobile">
-        <a href="login.html"> Login</a>
-        <a href="sign-in.html"> Register</a>
-        <a href="#">About</a>
-        <a href="ATS-test.html"> Test ATS</a>
-        <a href="AI.html" onclick="showSection('settings')"> Settings</a>
-  </div></p>
   </div>
   <script>
     const displaysection = {
