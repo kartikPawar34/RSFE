@@ -117,7 +117,7 @@
       color:goldenrod;
       border:1px solid goldenrod;
     }
-    .for-mobile{
+    .collapse-header{
       display:none;
     }
     @media screen and (max-width: 1080px) {
@@ -127,6 +127,31 @@
         .icon {
           display:none;
         }
+        .collapse-header{
+          display:contents;
+          font-size:7rem;
+        }
+        .collapse-content{
+          background-color:#000000c4;
+          backdrop-filter:blur(12px);
+          padding:3rem 1rem;
+          margin: 0 !important;
+          border: none;
+          outline: none;
+        }
+        .expand{
+          background-color:#000000c4;
+          backdrop-filter:blur(12px);
+          padding:0rem 1rem 1rem 1rem;
+          
+        }
+        .nav{
+         font-size:3rem;
+         margin-top:1.5rem;
+         display:block;
+         background-color: none;
+        }
+        
         .content {
           margin-left: 0;
           width: 100%;
@@ -137,7 +162,6 @@
           font-size:7rem;
           line-height: 1.1;
           text-align: center;
-          margin-top:30rem;
         }
         h1 {
           font-size: 4rem;
@@ -182,20 +206,90 @@
           background:#0000;
           padding:0 3rem;
         }
-        .for-mobile{
-          display:contents;
-        }
         a{
           text-decoration: none;
           color:#ffffff;
-          font-size:2rem;
-          background:rgba(83, 83, 83, 0.353);
-          backdrop-filter:blur(12px);
-          border-radius:25px;
-          padding:2rem;
-          border:1px solid #151515;
         }
       }
+@media screen and (max-width: 480px) {
+  .sidebar, .icon {
+    display: none;
+  }
+
+  .content {
+    margin-left: 0;
+    width: 100%;
+    padding: 1rem 1rem calc(1rem + env(safe-area-inset-bottom)) 1rem;
+    box-sizing: border-box;
+  }
+  .collapse-header{
+    display:contents;
+  }
+  .welcome {
+    font-size: 3.5rem; 
+    line-height: 1.2;
+    text-align: center;
+    margin-top: 10rem; 
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  .card {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .cards {
+    width: 90%;
+    height: auto;
+    min-height: 12rem;
+    font-size: 1.2rem; 
+    margin: 1rem auto;
+  }
+
+  .learning {
+    width: 100%;
+    height: 4rem;
+    margin: 2rem 0;
+    font-size: 1.5rem;
+    color: #000;
+    border-radius: 25px;
+    -webkit-tap-highlight-color: transparent; 
+  }
+
+  .about {
+    font-size: 1.2rem; 
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
+    margin: 2rem 0;
+    padding: 0 1.5rem;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); 
+  }
+
+  .about1 {
+    font-size: 1.5rem;
+  }
+
+  a {
+    display: inline-block; 
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+    background: rgba(83, 83, 83, 0.353);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); 
+    border-radius: 25px;
+    border: 1px solid #151515;
+    margin: 0.5rem 0;
+  }
+}
   </style>
 </head>
 <body>
@@ -211,21 +305,23 @@
     <a href="ATS-test.html"> Test ATS</a>
     <a href="AI.html" onclick="showSection('settings')"> Settings</a>
   </div>
-
+    
   <div class="content">
+    <details class="collapse-box">
+    <summary class="collapse-header"><p class="expand">...</p></summary>
+      <div class="collapse-content">
+        <a href="login.html" class="nav">Login</a>
+        <a href="sign-in.html" class="nav"> Register</a>
+        <a href="#" class="nav"> About</a>
+        <a href="ATS-test.html" class="nav"> Test ATS</a>
+        <a href="AI.html" onclick="showSection('settings')" class="nav">Settings</a>
+      </div>
+  </details>
     <h1 class="welcome">Welcome to ResumeScreen</h1>
     <button class="learning" onclick="showSection('learning')">
       Learn more
     </button>
-    <p class="about" id="learning">
-      <div class="for-mobile">
-        <a href="login.html"> Login</a>
-        <a href="sign-in.html"> Register</a>
-        <a href="#">About</a>
-        <a href="ATS-test.html"> Test ATS</a>
-        <a href="AI.html" onclick="showSection('settings')"> Settings</a>
-     </div>
-   </p>
+    <p class="about" id="learning"> </p>
     <h1>Upcoming Feature</h1>
     <div class="card" >
       <div class="cards">
